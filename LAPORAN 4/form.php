@@ -6,26 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="proses.php" method="post">
-        <label for="">Nilai1</label>
-        <input type="text" name="nilai1">
-        <br>
-        <label for="">Nilai2</label>
-        <input type="text" name="nilai2">
-        <br>
-        <input type="submit" name="submit" value="Proses">
+    <form method ="form" action ="proses.php">
+        <label> Nilai 1</label>
+        <input type="text" name="nilai1"></br>
+
+        <label> Nilai 2</label>
+        <input type="text" name="nilai2"></br>
+
+        <input type="submit" name="submit" value="proses">
     </form>
+    
 </body>
 </html>
-
-<!-- <?php
-echo $_GET['nilai1']. "<br>";
-echo $_GET['nilai2'];
-?> -->
-
-<?php
-echo $_REQUEST['nilai1']. "<br>". $_GET['nilai2'];
-?>
-
-
-
