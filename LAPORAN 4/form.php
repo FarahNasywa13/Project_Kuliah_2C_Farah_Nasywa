@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form method ="form" action ="proses.php">
+    <form method ="get" action ="proses.php">
         <label> Nilai 1</label>
         <input type="text" name="nilai1"></br>
 
@@ -15,6 +15,5 @@
 
         <input type="submit" name="submit" value="proses">
     </form>
-    
 </body>
 </html>
