@@ -1,6 +1,5 @@
 # Aplikasi pemesanan cafe (DeCafe)
-Sebuah aplikasi yang dapat digunakan untuk pemesanan minuman dan makanan pada cafe,
-restoran, rumah makan atau sejenisnya.
+Sebuah aplikasi yang dapat digunakan untuk pemesanan minuman dan makanan pada cafe, restoran, rumah makan atau sejenisnya.
 
 ## pemilik/admin (1)
     -Melihat laporan
