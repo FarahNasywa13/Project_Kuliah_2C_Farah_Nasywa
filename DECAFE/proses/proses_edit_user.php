@@ -9,7 +9,7 @@ $alamat = (isset ($_POST['alamat'])) ?  htmlentities($_POST['alamat']) : "" ;
 $password = md5('password');
 
 if(!empty($_POST['input_user_validate'])){
-<<<<<<< HEAD
+
     $select = mysqli_query($conn, "SELECT * FROM tb_user WHERE username = '$username'");
     if(mysqli_num_rows($select) > 0){
         $message = '<script>alert("Username yang dimasukkan telah ada");
@@ -27,7 +27,6 @@ if(!empty($_POST['input_user_validate'])){
                 window.location="../user"</script></script>';
     }
 }
-=======
     $query = mysqli_query($conn, "UPDATE tb_user SET nama='$name', username='$username', 
     level='$level', nohp='$nohp', alamat='$alamat' WHERE id='$id'");
     if(!$query){
@@ -38,6 +37,5 @@ if(!empty($_POST['input_user_validate'])){
                     window.location="../user"</script>
                     </script>';
     }
->>>>>>> 52da1c7c436b5b12c17cdf71efe0037dcb912666
 }echo $message;
 ?>  

@@ -198,13 +198,7 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                         <div class="col-lg-6">
                                             <div class="form-floating mb-3">
-<<<<<<< HEAD
-                                                <input <?php echo ($row['username'] == $_SESSION['username_decafe']) ?'disabled' : '' ; ?> type="email" class="form-control" 
-                                                id="floatingInput" placeholder="name@example.com" name="username" required 
-                                                value="<?php echo $row['username'] ?>">
-=======
                                                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" name="username" required value="<?php echo $row['username'] ?>">
->>>>>>> 52da1c7c436b5b12c17cdf71efe0037dcb912666
                                                 <label for="floatingInput">Username</label>
                                                 <div class="invalid-feedback">
                                                     Masukkan Username.
@@ -259,86 +253,6 @@ while ($record = mysqli_fetch_array($query)) {
 
                 <!-- end modal edit -->
 
-<<<<<<< HEAD
-                <!-- modal delete -->
-        <div class="modal fade" id="ModalDelete<?php echo $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-md modal-fullscreen-md-down">
-                        <div class="modal-content">
-                            <div class="modal-header"> 
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data User</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="needs-validation" novalidate action="proses/proses_delete_user.php"
-                                method="POST">
-                                    <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
-                                    <div class="col-lg-12">
-                                        <?php
-                                        if ($row['username'] == $_SESSION['username_decafe']){
-                                            echo "<div class='alert alert-danger'>Anda tidak dapat menghapus akun sendiri</div>";
-                                        }else{
-                                        echo "Apakah anda yakin ingin menghapus user <b>$row[username]</b>";
-                                        }
-                                            ?>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" 
-                                        data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-danger" name="input_user_validate" 
-                                        value="12345" <?php echo ($row['username'] == $_SESSION['username_decafe']) ?
-                                        'disabled': ''  ; ?>>Hapus</button>
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- end modal delete-->
-                
-                <!-- modal reset password-->
-        <div class="modal fade" id="ModalResetPassword<?php echo $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-md modal-fullscreen-md-down">
-                        <div class="modal-content">
-                            <div class="modal-header"> 
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Reset Password</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <form class="needs-validation" novalidate action="proses/proses_reset_password.php"
-                                method="POST">
-                                    <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
-                                    <div class="col-lg-12">
-                                        <?php
-                                        if ($row['username'] == $_SESSION['username_decafe']){
-                                            echo "<div class='alert alert-danger'>Anda tidak dapat mereset password sendiri</div>";
-                                        }else{
-                                        echo "Apakah anda yakin ingin mereset password user <b>$row[username]</b> 
-                                        menjadi password bawaan sistem yaitu <b>password</b> ";
-                                        }
-                                            ?>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" 
-                                        data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-success" name="input_user_validate" 
-                                        value="12345" <?php echo ($row['username'] == $_SESSION['username_decafe']) ?
-                                        'disabled': ''  ; ?>>Reset Password</button>
-                                    </div>
-                                </form>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- end modal reset password-->
-
-
-
-=======
->>>>>>> 52da1c7c436b5b12c17cdf71efe0037dcb912666
             <?php
             }
             if (empty($result)) {
@@ -383,22 +297,10 @@ while ($record = mysqli_fetch_array($query)) {
                                     <td><?php echo $row['nohp'] ?></td>
                                     <td class="d-flex">
                                         <button class="btn btn-info btn-sm me-2" data-bs-toggle="modal" 
-<<<<<<< HEAD
-                                        data-bs-target="#ModalView<?php echo $row['id']?>"><i 
-                                        class="bi bi-eye"></i></button>
-                                        <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" 
-                                        data-bs-target="#ModalEdit<?php echo $row['id']?>"><i
-                                        class="bi bi-pencil"></i></button>
-                                        <button class="btn btn-danger btn-sm me-1" data-bs-toggle="modal" 
-                                        data-bs-target="#ModalDelete<?php echo $row['id']?>"><i class="bi bi-trash"></i></button>
-                                        <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" 
-                                        data-bs-target="#ModalResetPassword<?php echo $row['id']?>"><i class="bi bi-key"></i></button>
-=======
                                         data-bs-target="#ModalView<?php echo $row['id']?>"><i class="bi bi-eye"></i></button>
                                         <button class="btn btn-warning btn-sm me-2" data-bs-toggle="modal" 
                                         data-bs-target="#ModalEdit<?php echo $row['id']?>"><i class="bi bi-pencil"></i></button>
                                         <button class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></button>
->>>>>>> 52da1c7c436b5b12c17cdf71efe0037dcb912666
                                     </td>
                                 </tr>
                             <?php
@@ -413,8 +315,6 @@ while ($record = mysqli_fetch_array($query)) {
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-=======
 
 <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -437,4 +337,3 @@ while ($record = mysqli_fetch_array($query)) {
             })
         })()
     </script>
->>>>>>> 52da1c7c436b5b12c17cdf71efe0037dcb912666

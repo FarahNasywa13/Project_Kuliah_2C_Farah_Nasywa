@@ -1,17 +1,4 @@
-<div class="col-lg-9 mt-2">
-                <div class="card">
-                    <div class="card-header">
-                        Daftar Menu
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Ini adalah bagian home</h5>
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi aliquam odit magni non accusamus quaerat nulla praesentium consequatur incidunt ducimus libero vero ratione tenetur, quidem neque, odio natus omnis. Omnis!
-                        </p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <?php
+<?php
 include "proses/connect.php";
 $query = mysqli_query($conn, "SELECT * FROM tb_daftar_menu
     LEFT JOIN tb_kategori_menu ON tb_kategori_menu.id = tb_daftar_menu.kategori");
@@ -19,7 +6,7 @@ while ($record = mysqli_fetch_array($query)) {
     $result[] = $record;
 }
 
-$select_kat_menu = mysqli_query($conn, "SELECT id,kategori_menu FROM tb_kategori_menu");
+$select_kat_menu = mysqli_query($conn, "SELECT id,kategori_menu FROM tb_kategori_menu")
 ?>
 <div class="col-lg-9 mt-2">
     <div class="card">
