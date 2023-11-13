@@ -5,7 +5,7 @@ $id = (isset($_POST['id'])) ? htmlentities($_POST['id']) : "";
 $catatan = (isset($_POST['catatan'])) ? htmlentities($_POST['catatan']) : "";
 
 if (!empty($_POST['siapsaji_orderitem_validate'])) {
-    $query = mysqli_query($conn, "UPDATE tb_list_order SET catatan='$catatan', status=1 WHERE id_list_order='$id'");
+    $query = mysqli_query($conn, "UPDATE tb_list_order SET catatan='$catatan', status=2 WHERE id_list_order='$id'");
     if (!$query) {
         $message = '<script>alert("Proses gagal"); 
         window.location="../dapur"</script>';
@@ -17,3 +17,4 @@ if (!empty($_POST['siapsaji_orderitem_validate'])) {
 
 echo $message;
 ?>
+
