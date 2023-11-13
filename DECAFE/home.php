@@ -18,7 +18,9 @@ while ($row = mysqli_fetch_array($query)) {
                 $firstSlideButton = false;
             ?>
 
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="<?php echo $slide ?>" class="<?php echo $aktif ?>" aria-current="true" aria-label="Slide <?php echo $slide + 1 ?>"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" 
+                data-bs-slide-to="<?php echo $slide ?>" class="<?php echo $aktif ?>" 
+                aria-current="true" aria-label="Slide <?php echo $slide + 1 ?>"></button>
             <?php
                 $slide++;
             } ?>
@@ -32,7 +34,8 @@ while ($row = mysqli_fetch_array($query)) {
                 $firstSlide = false;
             ?>
                 <div class="carousel-item <?php echo $aktif ?>">
-                    <img src="assets/img/<?php echo $data['foto'] ?>" class="img-fluid" style="height: 250px; width: 1000px; object-fit: cover" alt="...">
+                    <img src="assets/img/<?php echo $data['foto'] ?>" class="img-fluid" 
+                    style="height: 250px; width: 1000px; object-fit: cover" alt="...">
                     <div class="carousel-caption d-none d-md-block">
                         <h5><?php echo $data['nama_menu'] ?></h5>
                         <p><?php echo $data['keterangan'] ?></p>
