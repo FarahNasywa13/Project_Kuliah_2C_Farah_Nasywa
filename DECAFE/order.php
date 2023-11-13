@@ -183,11 +183,12 @@ while ($record = mysqli_fetch_array($query)) {
                         <tr class="text-nowrap">
                             <th scope="col">No</th>
                             <th scope="col">Kode Order</th>
-                            <th scope="col">waktu_order</th>
-                            <th scope="col">Menu</th>
-                            <th scope="col">Porsi</th>
-                            <th scope="col">Catatan</th>
+                            <th scope="col">Pelangga</th>
+                            <th scope="col">Meja</th>
+                            <th scope="col">Total Harga</th>
+                            <th scope="col">Pelayan</th>
                             <th scope="col">Status</th>
+                            <th scope="col">waktu_order</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>
