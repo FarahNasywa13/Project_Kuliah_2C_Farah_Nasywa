@@ -50,10 +50,10 @@ if (!empty($_POST['input_menu_validate'])) {
             if (move_uploaded_file($_FILES['foto']['tmp_name'], $target_file)) {
                 $query = mysqli_query($conn, "UPDATE tb_daftar_menu SET foto='" . $kode_rand . $_FILES["foto"]["name"] . "', nama_menu='$nama_menu', keterangan='$keterangan', kategori='$kat_menu', harga='$harga', stok='$stok' WHERE id='$id'");
                 if ($query) {
-                    $message = '<script>alert("Data berhasil dimasukkan")
+                    $message = '<script>alert("Data berhasil diedit")
             window.location="../menu"</script>';
                 } else {
-                    $message = '<script>alert("Data gagal dimasukkan")
+                    $message = '<script>alert("Data gagal diedit")
             window.location="../menu"</script>';
                 }
             } else {

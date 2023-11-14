@@ -289,33 +289,31 @@ $select_kat_menu = mysqli_query($conn,  "SELECT id_kat_menu,kategori_menu FROM t
             </div>
                 <!-- End Modal Edit-->
 
-                <!-- Modal Delete -->
-                <div class="modal fade" id="ModalDelete<?php echo $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-md modal-fullscreen-md-down">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data User</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- Modal Delete-->
+            <div class="modal fade" id="ModalDelete<?php echo $row['id'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-md modal-fullscreen-md-down">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data User</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="needs-validation" novalidate action="proses/proses_delete_menu.php" method="POST">
+                                        <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
+                                        <input type="hidden" value="<?php echo $row['foto'] ?>" name="foto">
+                                        <div class="col-lg-12">
+                                            Apakah anda ingin menghapus menu <b><?php echo $row['nama_menu'] ?></b>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="btn btn-danger" name="input_user_validate" value="12345">Hapus</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <form class="needs-validation" novalidate action="proses/proses_delete_menu.php" method="POST">
-                                    <input type="hidden" value="<?php echo $row['id'] ?>" name="id">
-                                    <input type="hidden" value="<?php echo $row['foto'] ?>" name="foto">
-                                    <div class="col-lg-12">
-                                        Apaka anda ingin menghapus menu <b><?php echo $row['nama_menu'] ?></b>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" 
-                                        data-bs-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-danger" name="input_user_validate" value="12345">Hapus</button>
-                                    </div>
-                                </form>
-                            </div>
-
                         </div>
                     </div>
-                </div>
-                <!-- akhir Modal Del -->
+                    <!-- End Modal Delete-->
 
             <?php
             }
