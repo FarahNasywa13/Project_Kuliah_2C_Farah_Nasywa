@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Jakarta');
 $query = mysqli_query($conn, "SELECT tb_order.*,tb_bayar.*,nama, SUM(harga*jumlah) AS harganya FROM tb_order
     LEFT JOIN tb_user ON tb_user.id = tb_order.pelayan
     LEFT JOIN tb_list_order ON tb_list_order.kode_order = tb_order.id_order
-    LEFT JOIN tb_daftar_menu ON tb_daftar_menu.id = tb_list_order.menu
+    LEFT JOIN tb_daftar_produk ON tb_daftar_produk.id = tb_list_order.produk
     JOIN tb_bayar ON tb_bayar.id_bayar = tb_order.id_order
     GROUP BY id_order ORDER BY waktu_order ASC");
 while ($record = mysqli_fetch_array($query)) {
@@ -22,7 +22,7 @@ while ($record = mysqli_fetch_array($query)) {
         
         <?php
         if (empty($result)) {
-            echo "Data menu makanan atau minuman tidak ada";
+            echo "Data produk tidak ada";
         } else {
             foreach ($result as $row) { 
                 ?>
