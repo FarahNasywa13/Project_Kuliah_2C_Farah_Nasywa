@@ -2,7 +2,7 @@
 session_start();
 include "connect.php";
 $kode_order = (isset ($_POST['kode_order'])) ?  htmlentities($_POST['kode_order']) : "" ;
-$meja = (isset ($_POST['meja'])) ?  htmlentities($_POST['meja']) : "" ;
+$no_hp = (isset ($_POST['no_hp'])) ?  htmlentities($_POST['no_hp']) : "" ;
 $pelanggan = (isset ($_POST['pelanggan'])) ?  htmlentities($_POST['pelanggan']) : "" ;
 
 if(!empty($_POST['input_order_validate'])){
@@ -14,14 +14,14 @@ if(!empty($_POST['input_order_validate'])){
 
     }else{ 
         
-    $query = mysqli_query($conn, "INSERT INTO tb_order (id_order,meja,pelanggan,pelayan) 
-    VALUES('$kode_order','$meja','$pelanggan','$_SESSION[id_decafe]')");
+    $query = mysqli_query($conn, "INSERT INTO tb_order (id_order,no_hp,pelanggan,pelayan) 
+    VALUES('$kode_order','$no_hp','$pelanggan','$_SESSION[id_decafe]')");
     if(!$query){
         $message = '<script>alert("Data gagal dimasukkan");
-                            window.location="../?x=orderitem&order='.$kode_order.'&meja='.$meja.'&pelanggan='.$pelanggan.'"</script>';
+                            window.location="../?x=orderitem&order='.$kode_order.'&no_hp='.$no_hp.'&pelanggan='.$pelanggan.'"</script>';
                 } else {
                     $message = '<script>alert("Data berhasil dimasukkan");
-                    window.location="../?x=orderitem&order='.$kode_order.'&meja='.$meja.'&pelanggan='.$pelanggan.'"</script>';
+                    window.location="../?x=orderitem&order='.$kode_order.'&no_hp='.$no_hp.'&pelanggan='.$pelanggan.'"</script>';
                 }
 
 }

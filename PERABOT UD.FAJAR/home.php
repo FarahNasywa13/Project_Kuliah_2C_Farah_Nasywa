@@ -75,7 +75,7 @@ $string_jumlah_pesanan = implode(',', $array_jumlah_pesanan);
     <div class="card mt-4 border-0 bg-light">
         <div class="card-body text-center">
             <h5 class="card-title">PERABOT UD.FAJAR - APLIKASI PEMESANAN ONLINE PERABOT</h5>
-            <p class="card-text">Aplikasi pemesanan online perabot. Nikmati beragam produk perabotan favorit Anda beberapa klik. pesan, bayar pembelian produk dengan mudah melalui aplikasi ini.</p>
+            <p class="card-text">Aplikasi pemesanan online perabot. Nikmati beragam produk perabotan favorit Anda. Pesan, bayar pembelian produk dengan mudah melalui aplikasi ini.</p>
             <a href="order" class="btn btn-dark">Buat Order</a>
         </div>
     </div>

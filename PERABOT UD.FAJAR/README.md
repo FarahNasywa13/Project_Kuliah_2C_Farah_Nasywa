@@ -10,7 +10,7 @@ Sebuah aplikasi yang dapat digunakan untuk pemesanan online produk perabotan rum
     -Membuat bukti pembayaran
       -Menerima pesanan
     -Konfirmasi terima pesanan
-    -Mengubah status pesanan "siap saji"
+    -Mengubah status pesanan "siap antar"
 ## Pelanggan (2)
     -Melihat menu dan harga
     -Memilih menu

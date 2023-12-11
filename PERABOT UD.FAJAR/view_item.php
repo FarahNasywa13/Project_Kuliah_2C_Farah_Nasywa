@@ -3,13 +3,13 @@ include "proses/connect.php";
 
 $query = mysqli_query($conn, "SELECT *, SUM(harga*jumlah) AS harganya FROM tb_list_order
     LEFT JOIN tb_order ON tb_order.id_order = tb_list_order.kode_order
-    LEFT JOIN tb_daftar_menu ON tb_daftar_menu.id = tb_list_order.menu
+    LEFT JOIN tb_daftar_produk ON tb_daftar_produk.id = tb_list_order.produk
     LEFT JOIN tb_bayar ON tb_bayar.id_bayar = tb_order.id_order
     GROUP BY id_list_order
     HAVING tb_list_order.kode_order = $_GET[order]");
 
 $kode = $_GET['order'];
-$meja = $_GET['meja'];
+$no_hp = $_GET['no_hp'];
 $pelanggan = $_GET['pelanggan'];
 
 while ($record = mysqli_fetch_array($query)) {
@@ -17,7 +17,7 @@ while ($record = mysqli_fetch_array($query)) {
 
 }
 
-$select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
+$select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produk");
 ?>
 <div class="col-lg-9 mt-2">
     <div class="card">
@@ -35,8 +35,8 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                 </div>
                 <div class="col-lg-2">
                     <div class="form-floating mb-3">
-                        <input disabled type="text" class="form-control" id="meja" value="<?php echo $meja; ?>">
-                        <label for="uploadFoto">Meja</label>
+                        <input disabled type="text" class="form-control" id="no_hp" value="<?php echo $no_hp; ?>">
+                        <label for="uploadFoto">No Hp</label>
                     </div>
                 </div>
                 <div class="col-lg-3">
@@ -50,7 +50,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
             
             <?php
             if (empty($result)) {
-                echo "Data menu makanan atau minuman tidak ada";
+                echo "Data produk makanan atau minuman tidak ada";
             } else {
                 foreach ($result as $row) { ?>
 
@@ -63,7 +63,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                     <table class="table table-hover">
                         <thead>
                             <tr class="text-nowrap">
-                                <th scope="col">Menu</th>
+                                <th scope="col">produk</th>
                                 <th scope="col">Harga</th>
                                 <th scope="col">Porsi</th>
                                 <th scope="col">Status</th>
@@ -78,7 +78,7 @@ $select_menu = mysqli_query($conn, "SELECT id,nama_menu FROM tb_daftar_menu");
                             ?>
                                 <tr>
                                     <td>
-                                        <?php echo $row['nama_menu'] ?>
+                                        <?php echo $row['nama_produk'] ?>
                                     </td>
                                     <td>
                                         <?php echo number_format($row['harga'], 0, ',', '.') ?>

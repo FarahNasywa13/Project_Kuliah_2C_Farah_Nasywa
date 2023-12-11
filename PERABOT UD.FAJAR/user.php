@@ -54,8 +54,6 @@ while ($record = mysqli_fetch_array($query)) {
                         <option selected hidden value="">Pilih Level User</option>
                         <option value="1">Owner/Admin</option>
                         <option value="2">Kasir</option>
-                        <option value="3">Pelayan</option>
-                        <option value="4">Dapur</option>
                       </select>
                       <label for="floatingInput">Level User</label>
                       <div class="invalid-feedback">

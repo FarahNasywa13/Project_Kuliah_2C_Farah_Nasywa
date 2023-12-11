@@ -16,13 +16,13 @@ while ($record = mysqli_fetch_array($query)) {
 <div class="col-lg-9 mt-2">
     <div class="card">
         <div class="card-header">
-            Halaman Pesan
+            Halaman Order
         </div>
         <div class="card-body">
             <div class="row">
                 <div class="col d-flex justify-content-end">
                     <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#ModalTambahUser"> 
-                        Tambah Pesan</button>
+                        Tambah Order</button>
                 </div>
             </div>
             <!-- Modal Tambah Order Baru-->
@@ -30,7 +30,7 @@ while ($record = mysqli_fetch_array($query)) {
                 <div class="modal-dialog modal-lg modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah pesanan</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Order Makanan dan Minuman</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -48,11 +48,11 @@ while ($record = mysqli_fetch_array($query)) {
                                     </div>
                                     <div class="col-lg-2">
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="merk" 
-                                            placeholder="Nomor Meja" name="merk" required>
-                                            <label for="meja">Merk</label>
+                                            <input type="text" class="form-control" id="no_hp" 
+                                            placeholder="Nomor No Hp" name="no_hp" required>
+                                            <label for="no_hp">No Hp</label>
                                             <div class="invalid-feedback">
-                                                Masukkan merk
+                                                Masukkan No Hp
                                             </div>
                                         </div>
                                     </div>
@@ -84,7 +84,7 @@ while ($record = mysqli_fetch_array($query)) {
         
         <?php
         if (empty($result)) {
-            echo "Data produk tidak ada";
+            echo "Data menu makanan atau minuman tidak ada";
         } else {
             foreach ($result as $row) { 
                 ?>
@@ -95,7 +95,7 @@ while ($record = mysqli_fetch_array($query)) {
                     <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah produk</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -113,11 +113,11 @@ while ($record = mysqli_fetch_array($query)) {
                                         </div>
                                         <div class="col-lg-2">
                                             <div class="form-floating mb-3">
-                                                <input type="number" class="form-control" id="merk" 
-                                                placeholder="Nomor Merk" name="merk" required value="<?php echo $row['merk'] ?>">
-                                                <label for="meja">Meja</label>
+                                                <input type="text" class="form-control" id="no_hp" 
+                                                placeholder="Nomor No Hp" name="no_hp" required value="<?php echo $row['no_hp'] ?>">
+                                                <label for="no_hp">No Hp</label>
                                                 <div class="invalid-feedback">
-                                                    Masukkan Merk
+                                                    Masukkan No Hp
                                                 </div>
                                             </div>
                                         </div>
@@ -184,8 +184,9 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="col">No</th>
                             <th scope="col">Kode Order</th>
                             <th scope="col">Pelanggan</th>
-                            <th scope="col">Angkutan</th>
+                            <th scope="col">No Hp</th>
                             <th scope="col">Total Harga</th>
+                            <th scope="col">Pegawai</th>
                             <th scope="col">Status</th>
                             <th scope="col">waktu_order</th>
                             <th scope="col">Aksi</th>
@@ -206,7 +207,7 @@ while ($record = mysqli_fetch_array($query)) {
                                 <?php echo $row['pelanggan'] ?>
                                 </td>
                                 <td>
-                                    <?php echo $row['angkutan'] ?>
+                                    <?php echo $row['no_hp'] ?>
                                 </td>
                                 <td>
                                     <?php echo number_format((int)$row['harganya'], 0, ',', '.') ?>
@@ -223,7 +224,7 @@ while ($record = mysqli_fetch_array($query)) {
                                 <td>
                             <div class="d-flex">
                                 <a class="btn btn-info btn-sm me-1" href="./?x=orderitem&order=<?php echo 
-                                $row['id_order'] . "&meja=" . $row['meja'] . "&pelanggan=" . $row['pelanggan'] ?>
+                                $row['id_order'] . "&no_hp=" . $row['no_hp'] . "&pelanggan=" . $row['pelanggan'] ?>
                                 "><i class="bi bi-eye"></i></a>
                                 <button class=" <?php echo (!empty($row['id_bayar'])) ? " 
                                 btn btn-secondary btn-sm me-1 disabled " : "btn btn-warning btn-sm me-1"; ?>

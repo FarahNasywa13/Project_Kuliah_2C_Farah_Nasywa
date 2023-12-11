@@ -47,7 +47,7 @@ if (!empty($_POST['input_produk_validate'])) {
                     window.location="../katalog"</script>';
         } else {
             if (move_uploaded_file($_FILES['foto']['tmp_name'], $target_file)) {
-                $query = mysqli_query($conn, "INSERT INTO tb_daftar_produk (foto,nama_produk,keterangan,kategori,harga,stok)values('" .$kode_rand . $_FILES['foto']['name'] . "','$nama_menu','$keterangan','$kat_menu','$harga','$stok')");
+                $query = mysqli_query($conn, "INSERT INTO tb_daftar_produk (foto,nama_produk,keterangan,kategori,harga,stok)values('" .$kode_rand . $_FILES['foto']['name'] . "','$nama_produk','$keterangan','$kat_produk','$harga','$stok')");
                 if (!$query) {
                     $message = '<script>alert("Data gagal dimasukkan");
                             window.location="../katalog"</script>';
