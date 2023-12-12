@@ -6,7 +6,7 @@ $records = mysqli_fetch_array($query);
 
 <nav class="navbar navbar-expand navbar-dark bg-dark sticky-top">
     <div class="container-lg">
-        <a class="navbar-brand" href="."><i class="bi bi-shop"></i></i> PERABOT UD.FAJAR</a>
+        <a class="navbar-brand" href="."><iconify-icon icon="emojione-v1:bed"></iconify-icon></i> PERABOT UD.FAJAR</a>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">

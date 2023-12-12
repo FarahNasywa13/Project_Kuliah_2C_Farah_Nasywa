@@ -1,6 +1,6 @@
 <?php
 //session_start();
-if(!empty($_SESSION['username_decafe'])){
+if(!empty($_SESSION['PERABOT UD.FAJAR'])){
     header('location: home');
 }
 ?>
@@ -22,7 +22,7 @@ if(!empty($_SESSION['username_decafe'])){
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -170,7 +170,7 @@ if(!empty($_SESSION['username_decafe'])){
 
     <main class="form-signin w-100 m-auto text-center">
         <form class="needs-validation" novalidate action="proses/proses_login.php" method="post">
-        <i class="bi bi-shop fs-1"></i>
+        <iconify-icon icon="noto:chair" width="50px" height="50px"></iconify-icon>
             <h1 class="h3 mb-3 fw-normal ">Pendaftaran</h1>
             <div class="form-floating">
                 <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>

@@ -95,7 +95,7 @@ $select_kat_produk = mysqli_query($conn,  "SELECT id_kat_produk,kategori_produk 
                                 </div>
 
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
                                     <button type="submit" class="btn btn-dark" name="input_produk_validate" value="12345">Save changes</button>
                                 </div>
                             </form>
@@ -278,7 +278,7 @@ $select_kat_produk = mysqli_query($conn,  "SELECT id_kat_produk,kategori_produk 
 
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="submit" class="btn btn-primary" name="input_produk_validate" value="12345">Save changes</button>
+                                    <button type="submit" class="btn btn-dark" name="input_produk_validate" value="12345">Save changes</button>
                                 </div>
                             </form>
                         </div>

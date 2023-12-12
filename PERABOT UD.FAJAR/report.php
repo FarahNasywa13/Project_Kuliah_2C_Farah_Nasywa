@@ -41,7 +41,7 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="col">Pelanggan</th>
                             <th scope="col">No Hp</th>
                             <th scope="col">Total Harga</th>
-                            <th scope="col">Pelayan</th>
+                            <th scope="col">Admin</th>
                             <th scope="col">Aksi</th>
                         </tr>
                     </thead>

@@ -30,7 +30,7 @@ while ($record = mysqli_fetch_array($query)) {
                 <div class="modal-dialog modal-lg modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Order Makanan dan Minuman</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Order Produk</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
@@ -84,7 +84,7 @@ while ($record = mysqli_fetch_array($query)) {
         
         <?php
         if (empty($result)) {
-            echo "Data menu makanan atau minuman tidak ada";
+            echo "Data produk    tidak ada";
         } else {
             foreach ($result as $row) { 
                 ?>
@@ -95,7 +95,7 @@ while ($record = mysqli_fetch_array($query)) {
                     <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Menu Makanan dan Minuman</h1>
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah produk</h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -186,7 +186,7 @@ while ($record = mysqli_fetch_array($query)) {
                             <th scope="col">Pelanggan</th>
                             <th scope="col">No Hp</th>
                             <th scope="col">Total Harga</th>
-                            <th scope="col">Pegawai</th>
+                            <th scope="col">Admin</th>
                             <th scope="col">Status</th>
                             <th scope="col">waktu_order</th>
                             <th scope="col">Aksi</th>
