@@ -33,7 +33,7 @@
                         <?php if($hasil['level']==1){ ?>
                         <li class="nav-item">
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'katproduk') ? 
-                            'active link-light' : 'link-dark' ; ?>" href="katproduk"><i class="bi bi-tags"></i> Kategori Produk</a>
+                            'active link-light' : 'link-dark' ; ?>" href="katproduk"><i class="bi bi-hdd-rack-fill"></i> Kategori Produk</a>
                         </li>
                         <?php } ?>
 

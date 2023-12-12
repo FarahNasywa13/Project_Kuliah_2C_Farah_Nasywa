@@ -102,7 +102,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="submit" class="btn btn-primary" name="input_orderitem_validate" value="12345">Simpan</button>
+                            <button type="submit" class="btn btn-dark" name="input_orderitem_validate" value="12345">Simpan</button>
                         </div>
                         </form>
                     </div>
@@ -170,7 +170,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="btn btn-primary" name="edit_orderitem_validate" value="12345">Simpan</button>
+                                            <button type="submit" class="btn btn-dark" name="edit_orderitem_validate" value="12345">Simpan</button>
                                         </div>
                                     </form>
                             </div>
@@ -333,7 +333,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                         if ($row['status']==1){
                                             echo "<span class='badge text-bg-warning'>Masuk ke dapur</span>";
                                         }elseif ($row['status']==2){
-                                            echo "<span class='badge text-bg-primary'>Siap saji</span>";
+                                            echo "<span class='badge text-bg-primary'>Siap Antar</span>";
                                         }
                                         ?>
                                     </td>
