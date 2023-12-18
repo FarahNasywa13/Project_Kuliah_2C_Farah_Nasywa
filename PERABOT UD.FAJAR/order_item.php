@@ -83,10 +83,10 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-floating mb-3">
-                                            <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Porsi" name="jumlah" required>
-                                            <label for="floatingInput">Jumlah Porsi</label>
+                                            <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Produk" name="jumlah" required>
+                                            <label for="floatingInput">Jumlah</label>
                                             <div class="invalid-feedback">
-                                                Masukkan Jumlah Porsi
+                                                Masukkan Jumlah Produk
                                             </div>
                                         </div>
                                     </div>
@@ -151,10 +151,10 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                             </div>
                                             <div class="col-lg-4">
                                                 <div class="form-floating mb-3">
-                                                    <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Porsi" name="jumlah" required value="<?php echo $row['jumlah'] ?>">
-                                                    <label for="floatingInput">Jumlah Porsi</label>
+                                                    <input type="number" class="form-control" id="floatingInput" placeholder="Jumlah Produk" name="jumlah" required value="<?php echo $row['jumlah'] ?>">
+                                                    <label for="floatingInput">Jumlah Produk</label>
                                                     <div class="invalid-feedback">
-                                                        Masukkan Jumlah Porsi
+                                                        Masukkan Jumlah Produk
                                                     </div>
                                                 </div>
                                             </div>
@@ -224,7 +224,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                             <tr class="text-nowrap">
                                                 <th scope="col">produk</th>
                                                 <th scope="col">Harga</th>
-                                                <th scope="col">Porsi</th>
+                                                <th scope="col">Produk</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Catatan</th>
                                                 <th scope="col">Total</th>
@@ -306,7 +306,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                             <tr class="text-nowrap">
                                 <th scope="col">produk</th>
                                 <th scope="col">Harga</th>
-                                <th scope="col">Porsi</th>
+                                <th scope="col">Produk</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Catatan</th>
                                 <th scope="col">Total</th>

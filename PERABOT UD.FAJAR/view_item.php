@@ -33,13 +33,13 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                         <label for="uploadFoto">Kode Order</label>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="form-floating mb-3">
                         <input disabled type="text" class="form-control" id="no_hp" value="<?php echo $no_hp; ?>">
                         <label for="uploadFoto">No Hp</label>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="form-floating mb-3">
                         <input disabled type="text" class="form-control" id="pelanggan" value="<?php echo $pelanggan; ?>">
                         <label for="uploadFoto">Pelanggan</label>
@@ -50,7 +50,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
             
             <?php
             if (empty($result)) {
-                echo "Data produk makanan atau minuman tidak ada";
+                echo "Data produk tidak ada";
             } else {
                 foreach ($result as $row) { ?>
 
@@ -65,7 +65,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                             <tr class="text-nowrap">
                                 <th scope="col">produk</th>
                                 <th scope="col">Harga</th>
-                                <th scope="col">Porsi</th>
+                                <th scope="col">Jumlah</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Catatan</th>
                                 <th scope="col">Total</th>
@@ -89,9 +89,9 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                     <td>
                                         <?php 
                                         if ($row['status']==1){
-                                            echo "<span class='badge text-bg-warning'>Masuk ke dapur</span>";
+                                            echo "<span class='badge text-bg-warning'>Sedang disiapkan</span>";
                                         }elseif ($row['status']==2){
-                                            echo "<span class='badge text-bg-primary'>Siap saji</span>";
+                                            echo "<span class='badge text-bg-primary'>Siap diantarkan</span>";
                                         }
                                         ?>
                                     </td>

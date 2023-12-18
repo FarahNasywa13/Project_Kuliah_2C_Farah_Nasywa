@@ -22,8 +22,7 @@
                             'active link-light' : 'link-dark' ; ?>" aria-current="page" href="home"><i class="bi bi-houses"></i>
                             </i> Dashboard</a>
                         </li>
-
-                        <?php if($hasil['level']==1 || $hasil['level']==3){ ?>
+                        <?php if($hasil['level']==1){ ?>
                         <li class="nav-item"> 
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'katalog') ? 
                             'active link-light' : 'link-dark' ; ?>" href="katalog"><i class="bi bi-images"></i></i> Katalog</a>
@@ -37,15 +36,21 @@
                         </li>
                         <?php } ?>
 
-                        <?php if($hasil['level']==1 || $hasil['level']==4){?>
+                        <?php if($hasil['level']==1){?>
                         <li class="nav-item">
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'order') ?
                             'active link-light' : 'link-dark' ; ?>" href="order"><i class="bi bi-cart-check"></i> Pesan</a>
                         </li>
+                        <?php } ?>
+
+                        <?php if($hasil['level']==1){?>
                         <li class="nav-item">
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'user') ? 
                             'active link-light' : 'link-dark' ; ?>" href="user"><i class="bi bi-person-bounding-box"></i> User</a>
                         </li>
+                        <?php } ?>
+
+                        <?php if($hasil['level']==1){?>
                         <li class="nav-item">
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'report') ?
                             'active link-light' : 'link-dark' ; ?>" href="report"><i class="bi bi-calendar-range"></i> Report</a>

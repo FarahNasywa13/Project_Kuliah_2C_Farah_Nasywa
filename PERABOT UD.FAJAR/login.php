@@ -199,6 +199,8 @@ if(!empty($_SESSION['PERABOT UD.FAJAR'])){
             <button class="btn btn-dark w-100 py-2" type="submit" name="submit_validate" value="abc">login</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2022 - <?php echo date("Y") ?></p>
         </form>
+        <p>username : admin@admin.com <br>
+	password : password<p>
     </main>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields

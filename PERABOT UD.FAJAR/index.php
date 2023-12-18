@@ -5,14 +5,13 @@
                     $page = "home.php";
                     include "main.php";
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'order') {
-                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 3) {
-                    $page = "order.php";
-                    include "main.php";
-                } else {
-                    $page = "home.php";
-                    include "main.php";
-                }
-
+                    if ($_SESSION['level_decafe'] == 1) {
+                        $page = "order.php";
+                        include "main.php";
+                    } else {
+                        $page = "home.php";
+                        include "main.php";
+                    }
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'user') {
                     if ($_SESSION['level_decafe'] == 1) {
                         $page = "user.php";
@@ -22,15 +21,13 @@
                         include "main.php";
                     }
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'dapur') {
-                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 4) {
+                    if ($_SESSION['level_decafe'] == 1) {
                         $page = "dapur.php";
                         include "main.php";
                     } else {
                         $page = "home.php";
                         include "main.php";
                     }
-
-
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'report') {
                     if ($_SESSION['level_decafe'] == 1) {
                         $page = "report.php";
@@ -40,7 +37,7 @@
                         include "main.php";
                     }
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'katalog') {
-                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 3) {
+                    if ($_SESSION['level_decafe'] == 1) {
                         $page = "katalog.php";
                         include "main.php";
                     } else {
@@ -59,27 +56,24 @@
                         $page = "home.php";
                         include "main.php";
                     }
-                
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'orderitem') {
-                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 3) {
-                    $page = "order_item.php";
-                    include "main.php";
+                    if ($_SESSION['level_decafe'] == 1) {
+                        $page = "order_item.php";
+                        include "main.php";
+                    } else {
+                        $page = "home.php";
+                        include "main.php";
+                    }
+                } elseif (isset($_GET['x']) && $_GET['x'] == 'viewitem') {
+                    if ($_SESSION['level_decafe'] == 1) {
+                        $page = "view_item.php";
+                        include "main.php";
+                    } else {
+                        $page = "home.php";
+                        include "main.php";
+                    }
                 } else {
                     $page = "home.php";
                     include "main.php";
                 }
-
-            } elseif (isset($_GET['x']) && $_GET['x'] == 'viewitem') {
-                if ($_SESSION['level_decafe'] == 1) {
-                $page = "view_item.php";
-                include "main.php";
-            } else {
-                $page = "home.php";
-                include "main.php";
-            }
-
-            } else {
-                $page = "home.php";
-                include "main.php";
-            }
                 ?>
