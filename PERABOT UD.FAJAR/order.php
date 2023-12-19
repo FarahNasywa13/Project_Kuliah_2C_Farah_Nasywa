@@ -46,7 +46,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2">
+                                    <div class="col-lg-3">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="no_hp" 
                                             placeholder="Nomor No Hp" name="no_hp" required>
@@ -56,7 +56,7 @@ while ($record = mysqli_fetch_array($query)) {
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-7">
+                                    <div class="col-lg-5">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="pelanggan" 
                                             placeholder="Nama Pelanggan" name="pelanggan">

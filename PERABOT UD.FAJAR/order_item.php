@@ -37,13 +37,13 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                         <label for="uploadFoto">Kode Order</label>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-3">
                     <div class="form-floating mb-3">
                         <input disabled type="text" class="form-control" id="no_hp" value="<?php echo $no_hp; ?>">
                         <label for="uploadFoto">no_hp</label>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="form-floating mb-3">
                         <input disabled type="text" class="form-control" id="pelanggan" value="<?php echo $pelanggan; ?>">
                         <label for="uploadFoto">Pelanggan</label>
