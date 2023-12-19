@@ -171,7 +171,7 @@ if(!empty($_SESSION['PERABOT UD.FAJAR'])){
     <main class="form-signin w-100 m-auto text-center">
         <form class="needs-validation" novalidate action="proses/proses_login.php" method="post">
         <iconify-icon icon="noto:chair" width="50px" height="50px"></iconify-icon>
-            <h1 class="h3 mb-3 fw-normal ">Pendaftaran</h1>
+            <h1 class="h3 mb-3 fw-normal ">Login</h1>
             <div class="form-floating">
                 <input name="username" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" required>
                 <label for="floatingInput">Email address</label>
@@ -198,6 +198,9 @@ if(!empty($_SESSION['PERABOT UD.FAJAR'])){
             </div>
             <button class="btn btn-dark w-100 py-2" type="submit" name="submit_validate" value="abc">login</button>
             <p class="mt-5 mb-3 text-body-secondary">&copy; 2022 - <?php echo date("Y") ?></p>
+            <p class="mt-3">
+                Sudah punya akun? <a href="register.php">Register Here</a>
+            </p>
         </form>
         <p>username : admin@admin.com <br>
 	password : password<p>
