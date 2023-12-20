@@ -175,7 +175,6 @@ while ($record = mysqli_fetch_array($query)) {
                   <th scope="row"><?php echo $no++ ?></th>
                 
                   <td><?php echo $row['kategori_produk'] ?></td>
-                  
                   <td class="d-flex">
                     <button class="btn btn-warning btn-sm me-1" data-bs-toggle="modal" 
                     data-bs-target="#ModalEdit<?php echo $row['id_kat_produk'] ?>"><i 

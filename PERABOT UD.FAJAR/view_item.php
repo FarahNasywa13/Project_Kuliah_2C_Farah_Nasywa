@@ -86,14 +86,9 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                     <td>
                                         <?php echo $row['jumlah'] ?>
                                     </td>
+                                    
                                     <td>
-                                        <?php 
-                                        if ($row['status']==1){
-                                            echo "<span class='badge text-bg-warning'>Sedang disiapkan</span>";
-                                        }elseif ($row['status']==2){
-                                            echo "<span class='badge text-bg-primary'>Siap diantarkan</span>";
-                                        }
-                                        ?>
+                                    <?php echo (!empty($row['id_bayar'])) ? "<span class='badge text-bg-warning'>sudah diantar</span>" : " "; ?>
                                     </td>
                                     <td>
                                         <?php echo $row['catatan'] ?>

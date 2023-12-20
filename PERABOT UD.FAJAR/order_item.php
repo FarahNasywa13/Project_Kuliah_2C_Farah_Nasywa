@@ -224,6 +224,7 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                             <tr class="text-nowrap">
                                                 <th scope="col">produk</th>
                                                 <th scope="col">Harga</th>
+                                                <th scope="col">Jumlah</th>
                                                 <th scope="col">Produk</th>
                                                 <th scope="col">Status</th>
                                                 <th scope="col">Catatan</th>
@@ -246,8 +247,15 @@ $select_produk = mysqli_query($conn, "SELECT id,nama_produk FROM tb_daftar_produ
                                                         <?php echo $row['jumlah'] ?>
                                                     </td>
                                                     <td>
-                                                        <?php echo $row['status'] ?>
-                                                    </td>
+                                        <?php 
+                                        if ($row['status']==1){
+                                            echo "<span class='badge text-bg-warning'>Sedang disiapkan</span>";
+                                        }elseif ($row['status']==2){
+                                            echo "<span class='badge text-bg-primary'>Siap diantarkan</span>";
+                                        }
+                                        ?>
+                                        
+                                    </td>
                                                     <td>
                                                         <?php echo $row['catatan'] ?>
                                                     </td>
