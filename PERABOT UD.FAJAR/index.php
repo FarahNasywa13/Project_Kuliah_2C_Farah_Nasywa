@@ -5,7 +5,7 @@
                     $page = "home.php";
                     include "main.php";
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'order') {
-                    if ($_SESSION['level_decafe'] == 1) {
+                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 2) {
                         $page = "order.php";
                         include "main.php";
                     } else {
@@ -37,7 +37,7 @@
                         include "main.php";
                     }
                 } elseif (isset($_GET['x']) && $_GET['x'] == 'katalog') {
-                    if ($_SESSION['level_decafe'] == 1) {
+                    if ($_SESSION['level_decafe'] == 1 || $_SESSION['level_decafe'] == 2) {
                         $page = "katalog.php";
                         include "main.php";
                     } else {

@@ -20,7 +20,7 @@ while ($record = mysqli_fetch_array($query)) {
 
       <!-- Modal Tambah Kategori produk-->
       <div class="modal fade" id="ModalTambahUser" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-xl modal-fullscreen-md-down">
+                <div class="modal-dialog modal-sm modal-fullscreen-md-down">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Kategori Produk</h1>
@@ -29,20 +29,8 @@ while ($record = mysqli_fetch_array($query)) {
                         <div class="modal-body">
                             <form class="needs-validation" novalidate action="proses/proses_input_katmenu.php" method="POST">
                                 <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="form-floating mb-3">
-                                            <select class="form-select" name="jenismenu" id="">
-                                                <option value="1">Kasur</option>
-                                                <option value="2">Lemari</option>
-                                                <option value="3">Meja</option>
-                                            </select>
-                                            <label for="floatingInput">Jenis Produk</label>
-                                            <div class="invalid-feedback">
-                                                Masukkan Jenis Produk
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
+                                    
+                                    <div class="col-lg-12">
                                         <div class="form-floating mb-3">
                                             <input type="text" class="form-control" id="floatingInput" placeholder="Kategori Produk" name="katproduk" required>
                                             <label for="floatingInput">Kategori Produk</label>
@@ -70,7 +58,7 @@ while ($record = mysqli_fetch_array($query)) {
       ?>
 
         <!-- Modal Edit-->
-        <div class="modal fade" id="ModalEdit<?php echo $row['id_kat_menu'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalEdit<?php echo $row['id_kat_produk'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-xl modal-fullscreen-md-down">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -78,27 +66,11 @@ while ($record = mysqli_fetch_array($query)) {
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                            <form class="needs-validation" novalidate action="proses/proses_edit_katmenu.php" method="POST">
-                                <input type="hidden" value="<?php echo $row['id_kat_menu'] ?>" name="id">
+                            <form class="needs-validation" novalidate action="proses/proses_edit_katproduk.php" method="POST">
+                                <input type="hidden" value="<?php echo $row['id_kat_produk'] ?>" name="id">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-floating mb-3">
-                                        <select class="form-select" aria-label="Default select example" required name="jenismenu" id="">
-                                                        <?php
-                                                        $data = array("Kasur", "Lemari");
-                                                        foreach ($data as $key => $value) {
-                                                            if ($row['jenis_menu'] == $key + 1) {
-                                                                echo "<option selected value=" . ($key + 1) . ">$value</option>";
-                                                            } else {
-                                                                echo "<option value=" . ($key + 1) . ">$value</option>";
-                                                            }
-                                                        }
-                                                        ?>
-                                                    </select>
-                                            <label for="floatingInput">Jenis Produk</label>
-                                            <div class="invalid-feedback">
-                                                Masukkan Jenis Produk
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6">
@@ -124,18 +96,18 @@ while ($record = mysqli_fetch_array($query)) {
                 <!-- End Modal Edit-->
 
         <!-- Modal Delete -->
-        <div class="modal fade" id="ModalDelete<?php echo $row['id_kat_menu'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="ModalDelete<?php echo $row['id_kat_produk'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-md modal-fullscreen-md-down">
             <div class="modal-content">
               <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data Kategori Menu</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data Kategori Produk</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
-                <form class="needs-validation" novalidate action="proses/proses_delete_katmenu.php" method="POST">
-                  <input type="hidden" value="<?php echo $row['id_kat_menu'] ?>" name="id">
+                <form class="needs-validation" novalidate action="proses/proses_delete_katproduk.php" method="POST">
+                  <input type="hidden" value="<?php echo $row['id_kat_produk'] ?>" name="id">
                   <div class="col-lg-12">
-                    Apakah anda ingin menghapus kategori <b><?php echo $row['kategori_menu'] ?></b>
+                    Apakah anda ingin menghapus kategori <b><?php echo $row['kategori_produk'] ?></b>
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

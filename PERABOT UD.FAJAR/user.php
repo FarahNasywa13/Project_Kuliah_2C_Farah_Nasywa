@@ -342,11 +342,7 @@ while ($record = mysqli_fetch_array($query)) {
                       if ($row['level'] == 1) {
                         echo "Admin";
                       } elseif ($row['level'] == 2) {
-                        echo "Kasir";
-                      } elseif ($row['level'] == 3) {
-                        echo "Pelayan";
-                      } elseif ($row['level'] == 4) {
-                        echo "Dapur";
+                        echo "pelanggan";
                       }
                       ?></td>
                   <td><?php echo $row['nohp'] ?></td>

@@ -22,7 +22,7 @@
                             'active link-light' : 'link-dark' ; ?>" aria-current="page" href="home"><i class="bi bi-houses"></i>
                             </i> Dashboard</a>
                         </li>
-                        <?php if($hasil['level']==1){ ?>
+                        <?php if($hasil['level']==1 || $hasil['level']==2){?>
                         <li class="nav-item"> 
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'katalog') ? 
                             'active link-light' : 'link-dark' ; ?>" href="katalog"><i class="bi bi-images"></i></i> Katalog</a>
@@ -36,7 +36,7 @@
                         </li>
                         <?php } ?>
 
-                        <?php if($hasil['level']==1){?>
+                        <?php if($hasil['level']==1 || $hasil['level']==2){?>
                         <li class="nav-item">
                             <a class="nav-link ps-2 <?php echo (isset($_GET['x']) && $_GET['x'] == 'order') ?
                             'active link-light' : 'link-dark' ; ?>" href="order"><i class="bi bi-cart-check"></i> Pesan</a>
